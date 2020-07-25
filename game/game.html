@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/game.css">
+    <title>数あてゲーム</title>
+  </head>
+  <body>
+    <h1>数あてゲーム</h1>
+    <h2>数あてゲーム</h2>
+
+    <div class="usazone">
+      <img src="../public_image/usa.png" alt="" class="usa">
+      <div class="hukidasi_usa">
+        <img src="../public_image/hukidasi.png" alt="usa" class="bk">
+        <p class="bk pp">数を当てるゲームかタイ？　どんな内容だタイ？</p>
+      </div>
+    </div>
+    <div class="gusazone">
+      <img src="../public_image/gusa.png" alt="" class="gusa">
+      <div class="hukidasi_gusa">
+        <img src="../public_image/hukidasi.png" alt="usa" class="bkg">
+        <p class="bkg pp">1から100までの数を当てるゲームをやりますぐさ。何回で当たるかを競うゲームですぐさ。実はやり方にはコツがありますぐさ。考えてみてくださいぐさ。</p>
+      </div>
+    </div>
+
+
+    <h2>ルール</h2>
+    <div class="setumei">
+      <p><span>１．</span>コンピューターが1から100までの数を決める。</p>
+      <p><span>２．</span>数を下のボックスに入力する</p>
+      <p><span>３. </span>入力した数がコンピューターが決めた数より大きければ、「正解の数より大きいです」と表示されて、小さければ「正解の数より小さいです」と表示される。</p>
+    </div>
+    <p>これを当たるまで繰り返します。</p>
+
+    <button type="button" name="button" id="start" onclick="showgamezone()">ゲームを開始する</button>
+
+      <form class="form" action="game.html" method="get" name="number_form">
+        <p id="menu"></p>
+        <input type="number" name="number" value="">
+        <button type="button" name="submit" onclick="game()">GO</button>
+        <p id="result"></p>
+      </form>
+
+    <a href="../index.html">トップページへ</a>
+
+    <footer>
+      Copylight &copy; Masakazu Kirisawa. All Rights Reserved. 2020.
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

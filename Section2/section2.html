@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/section2.css">
+    <title>演算をしよう</title>
+  </head>
+  <body>
+    <h2>Ｃ言語で四則演算をする</h2>
+    <p>Ｃ言語では、足し算、引き算、掛け算、割り算を行うことが出来ます。</p>
+    <p>その時に使用するのが、<span class="red">演算子</span>と呼ばれる記号です。リストを見てください。</p>
+
+    <table border="1">
+      <tr>
+        <th>　+　</th>
+        <th>足し算</th>
+      </tr>
+      <tr>
+        <th>　-　</th>
+        <th>引き算</th>
+      </tr>
+      <tr>
+        <th>　*　</th>
+        <th>掛け算</th>
+      </tr>
+      <tr>
+        <th>　/　</th>
+        <th>割り算</th>
+      </tr>
+      <tr>
+        <th>　==　</th>
+        <th>等号</th>
+      </tr>
+      <tr>
+        <th>　=　</th>
+        <th>代入</th>
+      </tr>
+      <tr>
+        <th>　&amp;&amp;　</th>
+        <th>かつ</th>
+      </tr>
+      <tr>
+        <th>　||　</th>
+        <th>または</th>
+      </tr>
+    </table>
+    <p>これがＣ言語のだいたいの演算子です。掛け算がアスタリスク　*　で、割り算が　/  というのが特徴です。</p>
+    <p>　&amp;&amp;　の<span class="red">「かつ」</span>とは、例えば、ご飯かつみそ汁とあれば、<span class="red">ごはんとみそ汁両方とも</span>という意味です。</p>
+    <p>  ||  の<span class="red">「または」</span>とは、ごはんとみそ汁<span class="red">どちらか一方</span>、という意味です。</p>
+    <p>さて、一番注意していただきたいのが、 =  と　==  の違いです。プログラミング言語では、  <span class="red">=  は「等しい」という意味でなく、「代入する」という意味</span>です。等しいと言いたいときは、　==　を使用します。</p>
+
+    <h2>計算してみよう！！</h2>
+    <p>では早速、演算子を使って計算してみましょう！！ と、その前に、ぴっぴいダイエット、ではなく、変数宣言について学びましょう。</p>
+    <p>変数とは数を入れるボックスのようなもので、　x　や　y　などを表します。</p>
+    <p>変数の宣言は、以下のように　<span class="red">int </span> か  <span class="red">double</span>  を使って宣言します。</p>
+
+    <img src="./lecture2-1.png" alt="lecture2-1">
+    <p>int　は整数（１，２，３など小数の無い数）のみを格納するのに対し、 double  は<span class="red">小数も格納できる</span>というのが大きな違いです。</p>
+    <p>int  を書いた横に変数名（xやy)を書いて、最後  ;  をつけて宣言終了です。また計算式にも最後、  ;  をつけます。</p>
+    <p>では、早速演算です！　四則演算は以下のようにして行います。</p>
+    <img src="./lecture2-2.png" alt="lecture2-2">
+    <p> x は整数型の変数です。</p>
+    <p> x = 5; は、x  に  5　を代入します。ここでの  x  の値は　5  です。</p>
+    <p> x = 3 + 5; は、3 + 5 の計算をした後、その値を  x　に代入します。すでに  x  に何か値が入っている場合は、上書きされます。ここでの  x  の値は　8  です。</p>
+    <p> x = 3 * 5; は、3 * 5 の計算をした後、その値を  x　に代入します。ここでの  x  の値は　15  です。</p>
+    <p> x = 3 - 5; は、3 - 5 の計算をした後、その値を  x　に代入します。ここでの  x  の値は　-2  です。</p>
+    <p> x = 3 / 5; は、3 ÷ 5 の計算をした後、その商を  x　に代入しますが、小数点以下は切り捨てられます。ここでの  x  の値は　0  です。</p>
+    <p></p>
+
+    <div class="usazone">
+      <img src="../public_image/usa.png" alt="" class="usa">
+      <div class="hukidasi_usa">
+        <img src="../public_image/hukidasi.png" alt="usa" class="bk">
+        <p class="bk pp">割り算はちょっと難しいタイね... 10 / 3　だったら、3余り1だから、3が代入されるのかタイ？</p>
+      </div>
+    </div>
+    <div class="gusazone">
+      <img src="../public_image/gusa.png" alt="" class="gusa">
+      <div class="hukidasi_gusa">
+        <img src="../public_image/hukidasi.png" alt="usa" class="bkg">
+        <p class="bkg pp">そうですぐさ。割り算は商を代入して、余りは切り捨てますぐさ。ちなみに、割り算の余りを代入したい場合は、<span class="red">%</span>という演算子を使いますぐさ。13 % 3 は、4余り2なので、2が代入されますぐさ。</p>
+      </div>
+    </div>
+
+
+
+    <h2>演算結果を表示しよう</h2>
+    <p>上記の計算結果は、printf関数で表示する事が出来ます。以下のリストをご覧ください。</p>
+    <div class="kansu">
+      <dl>
+        <dt>printf("%d", x);</dt>
+        <dd>x　の値を表示する。</dd>
+        <dt>printf("%d", x + 3);</dt>
+        <dd>x  に3を加えた値を表示する。</dd>
+      </dl>
+    </div>
+
+    <p>このようにすることで、整数型の変数　x　の値を表示することが出来ます。取り敢えず形として覚えてください。なお、""の一番最後に<span class="red">\nをつけると、改行して表示することが出来ます。</span></p>
+    <img src="./lecture2-3.png" alt="lecture2-3">
+    <p>実行結果</p>
+    <img src="./lecture2-4.png" alt="lecture2-4">
+
+    <div class="usazone">
+      <img src="../public_image/usa.png" alt="" class="usa">
+      <div class="hukidasi_usa">
+        <img src="../public_image/hukidasi.png" alt="usa" class="bk">
+        <p class="bk pp">まってタイ。文字列と整数を同時に表示することは出来ないのかタイ？</p>
+      </div>
+    </div>
+    <div class="gusazone">
+      <img src="../public_image/gusa.png" alt="" class="gusa">
+      <div class="hukidasi_gusa">
+        <img src="../public_image/hukidasi.png" alt="usa" class="bkg">
+        <p class="bkg pp">できますぐさ。例えば、「計算結果は3です」のように表示したい場合、printf("計算結果は%dです", x);のように数字の部分を%dに置き換えて入力するぐさ。ちなみに、小数を表示したい場合、%dの代わりに%fを入力しますぐさ。</p>
+      </div>
+    </div>
+
+
+    <p>いかがでしたが。このように演算子を使って計算ができるんです。</p>
+
+    <a href="../index.html">トップページへ</a>
+    <footer>
+      Copylight &copy; Masakazu Kirisawa. All Rights Reserved. 2020.
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/section2.js"></script>
+  </body>
+</html>
